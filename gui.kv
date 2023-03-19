@@ -1,0 +1,110 @@
+<NumButton@Button>:
+    on_release:
+        app.tela_digitos(self)
+<OpButton@Button>:
+    on_release:
+        app.operacoes(self) 
+<FunButton@Button>:
+    on_release:
+        app.funcoes(self)
+<Sc_Manager>:
+    Sc_Calculadora:
+        id: calculadora
+        name: "calculadora"
+<Sc_Calculadora>:
+    txt_display: txt_display
+    BoxLayout:        
+        orientation: "vertical"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: 0.2
+            Label:
+                text: "Calculadora Digital"
+            TextInput:
+                id: txt_display
+                font_name: 'lcd-font.ttf'
+                size_hint: (1, None)
+                height: 48
+                halign: "right"
+                valign: "center"
+                bold: True
+                font_size: "24dp"    
+                foreground_color: (0,0.2,0.8,1)                            
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: 0.8
+            GridLayout:
+                cols: 4
+                rows: 4
+                FunButton:
+                    text: "ON | CE"
+                FunButton:
+                    text: "MRC"
+                FunButton:
+                    text: "M-"
+                FunButton:
+                    text: "M+"
+                FunButton:
+                    text: "OFF"
+                OpButton:
+                    text: "√"
+                OpButton:
+                    text: "%"
+                OpButton:
+                    text: "÷"
+                NumButton:
+                    text: "7"
+                NumButton:
+                    text: "8"
+                NumButton:
+                    text: "9"
+                OpButton:
+                    text: "*"
+                NumButton:
+                    text: "4"
+                NumButton:
+                    text: "5"
+                NumButton:
+                    text: "6"
+                OpButton:
+                    text: "-"
+            BoxLayout:
+                orientation: "vertical"
+                GridLayout:
+                    cols: 4
+                    rows: 1
+                    GridLayout:
+                        cols: 3
+                        rows: 2
+                        size_hint: (3/4, None)
+                        NumButton:
+                            size_hint_y: 1/4
+                            text: "1"
+                        NumButton:
+                            size_hint_y: 1/4
+                            text: "2"
+                        NumButton:
+                            size_hint_y: 1/4
+                            text: "3"
+                        NumButton:
+                            size_hint_y: 1/4
+                            text: "0"
+                        NumButton:
+                            size_hint_y: 1/4
+                            text: "."
+                        FunButton:
+                            size_hint_y: 1/4
+                            text: "="
+                    GridLayout:
+                        cols: 1
+                        rows: 1
+                        size_hint: (1/4, None)
+                        OpButton:
+                            text: "+"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: 0.2
+            Label:
+                text: "Esperando Interação..."
+            Button:
+                text: "Sair"
