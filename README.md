@@ -8,3 +8,6 @@ Kivy é um framework Multiplataforma que permite o Design e Desenvolvimento de S
 que se ajusta dinâmicamente a vários e diferentes tamanhos de tela.
 
 Vamos resolver as principais operações aritméticas com esta linda calculadora.
+
+Visite meu website também:  
+<a href="http://zigamultimedia.tech">http://zigamultimedia.tech</a>  
